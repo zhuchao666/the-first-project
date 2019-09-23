@@ -1,0 +1,31 @@
+﻿var myfriendlink = document.getElementById("myfriendlink");
+var friendlinkinput = document.getElementById("friendlinkinput");
+var friendlinkbutton = document.getElementById("friendlinkbutton");
+var friendlinks = document.getElementById("friendlinks");
+var myfriendlinkOpts = friendlinks.getElementsByTagName("a");
+
+for(i=0,l=myfriendlinkOpts.length;i<l;i++){
+    myfriendlinkOpts[i].onclick = function(){
+        friendlinkinput.value = this.innerHTML;
+        anchor.target = "_blank"; 
+        hideOptions();
+        return false;
+    }
+    
+}
+
+function showOptions () {
+	friendlinks.style.display='block';
+}
+function hideOptions () {
+	friendlinks.style.display='none';
+}
+document.onclick = function(e){
+	var evt = e?e:window.event;
+	var ele = evt.srcElement || evt.target;
+	if(ele.id == 'friendlinkinput' || ele.id == 'friendlinkbutton'){
+		showOptions();
+	}else{
+		hideOptions();
+	}
+}
