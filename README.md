@@ -1,2 +1,3 @@
 # the-first-project
-hello wrold
+2019.09.23
+做决定的当晚，拿起生疏的前端代码，开始努力吧！
